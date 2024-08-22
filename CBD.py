@@ -7,11 +7,11 @@ nucelotide_sequence = open(sys.argv[1], "r")
 codons = open(sys.argv[2], "r")
 
 
-def amino_acids(): #in part 2, possibly consider removing this function because it is not needed. Can just take everything in the start and pass that through
+def amino_acids(): 
     amino_dict = {} #this will store a dict of the amino acids
     for line in codons:
         line = line.strip()
-        if line: #this makes sure that the lines that are empty do not get filled? 
+        if line: #this makes sure that the lines that are empty
 
             codon, acid = line.split()[:2] #this splits the codons and gets just the two first parts that are needed
             amino_dict[codon.lower()] = acid.lower() #turns it lowercase to check
